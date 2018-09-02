@@ -9,20 +9,30 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Sobre vosotros
+      <li [routerLink]="['/dashboard/information']" class="nav-item active">
+        <a class="nav-link">Sobre Nosotros
           <span class="sr-only">(current)</span>
         </a>
       </li>
       <li class="nav-item dropdown active">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
           aria-expanded="false">
           Mascotas
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Perros</a>
-          <a class="dropdown-item" href="#">Gatos</a>
-          <a class="dropdown-item" href="#">Otros</a>
+          <a [routerLink]="['/dashboard/animals-list']" class="dropdown-item">Perros</a>
+          <a [routerLink]="['/dashboard/animals-list']" class="dropdown-item">Gatos</a>
+          <a [routerLink]="['/dashboard/animals-list']" class="dropdown-item">Otros</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown active">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">
+          Traspasos
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Realizar Traspaso</a>
+          <a class="dropdown-item" href="#">Peticiones de Traspasos</a>
         </div>
       </li>
     </ul>
@@ -32,6 +42,6 @@
     </form>
   </div>
 </nav>
-<div >
+<div>
   <router-outlet></router-outlet>
 </div>

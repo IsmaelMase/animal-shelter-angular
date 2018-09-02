@@ -9,15 +9,23 @@ import { DashboardComponent } from './components/dashboard.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 
+//PrimeNG Components
+import { InputTextModule } from 'primeng/inputtext';
+import { ButtonModule } from 'primeng/button';
+import { InputTextareaModule } from 'primeng/inputtextarea';
+import { FileUploadModule } from 'primeng/fileupload';
+
 //Routing
 import { routing, appRoutingProviders } from './app.routing';
 import { InformationComponent } from './components/information.component';
+import { AnimalsListComponent } from './components/animals-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    InformationComponent
+    InformationComponent,
+    AnimalsListComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +38,12 @@ import { InformationComponent } from './components/information.component';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    routing
+    routing,
+    //PRIME
+    InputTextModule,
+    ButtonModule,
+    InputTextareaModule,
+    FileUploadModule
   ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent]

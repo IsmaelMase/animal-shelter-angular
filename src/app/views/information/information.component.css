@@ -2,3 +2,35 @@
     padding: 2%;
     background-color: rgb(236, 236, 236) !important;
 }
+
+.card{
+    width: 100%;
+}
+
+.image{
+    width: 100%;
+}
+
+.full-input{
+    width: 100%;
+}
+
+.card-small{
+    margin-top: 10%;
+}
+
+.row-padding{
+    margin-top: 2%;
+}
+
+.field-padding{
+    margin-top: 4%;
+}
+
+.button-right{
+    float: right;
+}
+
+.button-tittle{
+    float: right;
+}
