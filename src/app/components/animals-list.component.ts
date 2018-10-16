@@ -7,7 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AnimalsListComponent implements OnInit {
 
-  constructor() { }
+  public fields: any[];
+  public selectedFields: any[];
+
+  constructor() {
+    this.fields = [
+      { name: 'New York' },
+      { name: 'Rome' },
+      { name: 'London' },
+      { name: 'Istanbul' },
+      { name: 'Paris' }
+    ];
+  }
 
   ngOnInit() {
   }

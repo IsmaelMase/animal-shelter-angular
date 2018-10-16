@@ -1,0 +1,43 @@
+<div class="card-container">
+  <p-card title="Nombre" subtitle="Raza" styleClass="ui-card">
+    <p-header>
+      <img src="Card" src="../../../assets/image-unknow.jpeg">
+    </p-header>
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+        <b>Peso: </b>
+        <span>peso</span>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+        <b>Edad: </b>
+        <span>edad</span>
+      </div>
+    </div>
+    <div class="row row-padding">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+        <b>Tamaño: </b>
+        <span>tamaño</span>
+      </div>
+    </div>
+    <div class="row row-padding">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+        <span class="badge badge-danger">Urgente</span>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+        <span class="badge badge-warning">Invisible</span>
+      </div>
+    </div>
+    <div class="row row-padding">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+        <span class="badge badge-success">Adoptado</span>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+        <span class="badge badge-info">Reservado</span>
+      </div>
+    </div>
+    <p-footer>
+      <button pButton type="button" (click)="updateAnimal()" icon="pi pi-pencil" class="ui-button-warning ui-button-rounded"></button>
+      <button pButton type="button" icon="pi pi-trash" style="float: right" class="ui-button-danger ui-button-rounded"></button>
+    </p-footer>
+  </p-card>
+</div>

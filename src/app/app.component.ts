@@ -13,4 +13,8 @@ export class AppComponent {
     private _route: ActivatedRoute,
     private _router: Router,
   ) { }
+
+  ngOnInit() {
+    this._router.navigate(['dashboard']);
+  }
 }

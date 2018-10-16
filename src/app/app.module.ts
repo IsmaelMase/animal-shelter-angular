@@ -14,18 +14,24 @@ import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { FileUploadModule } from 'primeng/fileupload';
+import { CardModule } from 'primeng/card';
+import { SidebarModule } from 'primeng/sidebar';
+import { ToolbarModule } from 'primeng/toolbar';
+import { MultiSelectModule } from 'primeng/multiselect';
 
 //Routing
 import { routing, appRoutingProviders } from './app.routing';
 import { InformationComponent } from './components/information.component';
 import { AnimalsListComponent } from './components/animals-list.component';
+import { CardInformationComponent } from './components/card-information.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     InformationComponent,
-    AnimalsListComponent
+    AnimalsListComponent,
+    CardInformationComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +49,11 @@ import { AnimalsListComponent } from './components/animals-list.component';
     InputTextModule,
     ButtonModule,
     InputTextareaModule,
-    FileUploadModule
+    FileUploadModule,
+    CardModule,
+    SidebarModule,
+    ToolbarModule,
+    MultiSelectModule
   ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent]
