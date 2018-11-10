@@ -7,9 +7,9 @@
     <h1 style="font-weight:normal">Ordenar por...</h1>
     <button pButton type="button" (click)="visibleSidebar2 = false" label="Aceptar" class="ui-button-success ui-button-rounded"></button>
   </p-sidebar>
-  <p-sidebar [(visible)]="visibleSidebar5" [fullScreen]="true" [baseZIndex]="10000">
+  <p-sidebar [(visible)]="visibleSidebar5" [fullScreen]="true" blockScroll="true" [baseZIndex]="5000000">
     <h1 style="font-weight:normal">Registro</h1>
-    <button pButton type="button" (click)="visibleSidebar5 = false" label="Guardar" class="ui-button-success ui-button-rounded"></button>
+    <animal-form (closeSideBar)="visibleSidebar5 = false"></animal-form>
   </p-sidebar>
   <p-toolbar>
     <div class="ui-toolbar-group-left">
@@ -28,7 +28,7 @@
   </p-toolbar>
   <div class="row row-body">
     <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-      <card-information (openForm)="visibleSidebar5 = true"></card-information>
+      <card-information (openForm)="visibleSidebar5 = true" (remove)="reloadAnimalList()"></card-information>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
       <card-information></card-information>

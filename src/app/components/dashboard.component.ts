@@ -5,7 +5,7 @@ import { map } from 'rxjs/operators';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 
 @Component({
-  selector: 'app-dashboard',
+  selector: 'dashboard',
   templateUrl: '../views/dashboard/dashboard.component.html',
   styleUrls: ['../views/dashboard/dashboard.component.css']
 })

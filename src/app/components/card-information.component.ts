@@ -11,6 +11,9 @@ export class CardInformationComponent implements OnInit {
   @Output()
   openForm: EventEmitter<string> = new EventEmitter<string>();
 
+  @Output()
+  remove: EventEmitter<string> = new EventEmitter<string>();
+
   @Input('animal') animal: Animal;
 
 
@@ -18,11 +21,14 @@ export class CardInformationComponent implements OnInit {
 
   ngOnInit() {
     this.animal = new Animal("", "", "", "", "", "", "", false, false, "", "", [], false, false, null);
-    console.log(this.animal);
   }
 
   updateAnimal() {
     this.openForm.emit("open");
+  }
+
+  removeAnimal(){
+    this.remove.emit("open");
   }
 
 }

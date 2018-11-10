@@ -1,0 +1,16 @@
+.row-padding{
+    margin-top: 2%;
+}
+
+.text-area{
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+ul{
+    overflow: auto;
+}
+
+.save-button{
+    margin-top: 4%;
+}

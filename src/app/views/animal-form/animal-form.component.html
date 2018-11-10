@@ -1,0 +1,92 @@
+<form  [formGroup]="animalForm" (ngSubmit)="saveAnimal()">
+  <div class="ui-grid ui-grid-responsive ui-grid-pad ui-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <span class="ui-float-label">
+          <input id="name-input" type="text" size="30" pInputText required>
+          <label for="name-input">Nombre</label>
+        </span>
+
+        <p-message severity="error" text="Campo obligatorio" *ngIf="!animal.name"></p-message>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <span class="ui-float-label">
+          <input id="specie-input" type="text" size="30" pInputText>
+          <label for="specie-input">Especie</label>
+        </span>
+
+        <p-message severity="error" text="Campo obligatorio" *ngIf="!animal.specie"></p-message>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <span class="ui-float-label">
+          <input id="breed-input" type="text" size="30" pInputText>
+          <label for="breed-input">Raza</label>
+        </span>
+
+        <p-message severity="error" text="Campo obligatorio" *ngIf="!animal.breed"></p-message>
+      </div>
+    </div>
+    <div class="row row-padding">
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <span class="ui-float-label">
+          <input id="name-input" type="text" size="30" pInputText required>
+          <label for="name-input">Tamaño</label>
+        </span>
+
+        <p-message severity="error" text="Campo obligatorio" *ngIf="!animal.size"></p-message>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <span class="ui-float-label">
+          <input id="specie-input" type="text" size="30" pInputText>
+          <label for="specie-input">Fecha de nacimiento</label>
+        </span>
+
+        <p-message severity="error" text="Campo obligatorio" *ngIf="!animal.age"></p-message>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <div class="ui-grid ui-grid-responsive ui-grid-pad ui-fluid">
+          <div class="row row-padding">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+              <p-checkbox label="Urgente" binary="true"></p-checkbox>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+              <p-checkbox label="Dificil adopción" binary="true"></p-checkbox>
+            </div>
+          </div>
+          <div class="row row-padding">
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+              <p-radioButton name="state" value="Disponible" label="Disponible" inputId="opt1"></p-radioButton>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+              <p-radioButton name="state" value="Adoptado" label="Adoptado" inputId="opt1"></p-radioButton>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+              <p-radioButton name="state" value="Reservado" label="Reservado" inputId="opt1"></p-radioButton>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row row-padding">
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+        <h5 class="text-area">Datos</h5>
+        <textarea class="form-control text-area" rows="3" id="comment"></textarea>
+        <h5 class="text-area">Enfermades</h5>
+        <textarea class="form-control text-area" rows="3" id="comment"></textarea>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+        <h5 class="card-title">Fotos</h5>
+        <p-fileUpload name="demo[]" chooseLabel="Seleccionar" [showUploadButton]="false" [showCancelButton]="false" (onUpload)="onUpload($event)"
+          multiple="multiple" accept="image/*" maxFileSize="1000000">
+          <ng-template pTemplate="content">
+            <ul *ngIf="uploadedFiles.length">
+              <li *ngFor="let file of uploadedFiles">{{file.name}} - {{file.size}} bytes</li>
+            </ul>
+          </ng-template>
+        </p-fileUpload>
+      </div>
+    </div>
+  </div>
+  
+  <button pButton type="submit" label="Guardar" [disabled]="!animalForm.valid" class="save-button ui-button-success ui-button-rounded"></button>
+</form>

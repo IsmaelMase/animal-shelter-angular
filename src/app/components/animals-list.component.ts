@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-animals-list',
+  selector: 'animals-list',
   templateUrl: '../views/animals-list/animals-list.component.html',
   styleUrls: ['../views/animals-list/animals-list.component.css']
 })
@@ -21,6 +21,10 @@ export class AnimalsListComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  reloadAnimalList(){
+    console.log("se ha hecho algun cambio");
   }
 
 }
